@@ -51,7 +51,7 @@ header nav ul {
 header nav ul li {
     list-style: none;
     padding: 0 15px;
-    font-size: 20px;
+    font-size: 17px;
 }
 
 header nav ul li a{
@@ -65,6 +65,10 @@ header nav ul li a:hover {
     color: white;
     font-weight: 700;
     transition: 0.3s ease;
+}
+
+header .menu {
+    display: none;
 }
 
 /* TODO START */
@@ -100,6 +104,52 @@ header .searchBox .searchInput {
 
 header .searchBox .searchInput::placeholder {
     color: rgba(0, 0, 0, 0.25);
+}
+
+#null {
+    color: rgb(75, 75, 75) ;
+}
+
+@media screen and (max-width: 1279px) {
+    header .searchBox {
+        display: none;
+    }
+
+    header nav ul li {
+        list-style: none;
+        padding: 0 15px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header .navbar {
+        display: none;
+    }
+
+    header .searchBox {
+        display: none;
+    }
+
+    header .menu {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    header {
+        justify-content: space-around;
+    }
+
+    header .searchBox {
+        display: none;
+    }
+
+    header .menu {
+        display: none;
+    }
+
 }
 
 /* TODO END */
@@ -152,7 +202,15 @@ footer nav ul li a:hover {
 }
 
 /* Media Queries */
-@media (max-width: 600px) {
+@media screen and (min-width: 769px) and (max-width: 1279px) {
+
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+
+}
+
+@media screen and (max-width: 480px) {
 
     footer .footer-logo {
         margin-bottom: 30px;
@@ -170,3 +228,21 @@ footer nav ul li a:hover {
     }
 
 }
+
+/* ===== SCROLLBAR =====*/
+::-webkit-scrollbar {
+    width: 7px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, .75);
+    border-radius: 100px;
+  }
+  
+  
+  
+  /* ===== SELECTION =====*/
+  ::selection {
+    color: red;
+    background: blue;
+  }
