@@ -110,6 +110,10 @@ header .searchBox .searchInput::placeholder {
     color: rgb(75, 75, 75) ;
 }
 
+#null:hover {
+    font-weight: 300 !important;
+}
+
 @media screen and (max-width: 1279px) {
     header .searchBox {
         display: none;
@@ -243,6 +247,6 @@ footer nav ul li a:hover {
   
   /* ===== SELECTION =====*/
   ::selection {
-    color: red;
-    background: blue;
+    color: var(--cor-branco);
+    background: var(--cor-terciaria);
   }

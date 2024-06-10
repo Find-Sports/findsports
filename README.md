@@ -6,13 +6,13 @@ FindSports é um site dedicado a incentivar a prática de esportes e conectar pe
 
 - **Perfis de Usuários**: Crie seu perfil, adicione informações sobre seus esportes favoritos, nível de habilidade e localização.
 - **Encontre Parceiros de Treino**: Procure por outros usuários com interesses semelhantes e convide-os para treinar juntos.
-- **Eventos Esportivos Locais**: Descubra eventos esportivos locais, torneios e competições.
+- **Eventos Esportivos Arenas**: Descubra eventos esportivos arenas, torneios e competições.
 - **Fórum de Discussão**: Participe de discussões sobre táticas, dicas de treinamento, nutrição esportiva e muito mais.
 - **Mensagens Privadas**: Envie mensagens diretamente para outros usuários para organizar treinos ou compartilhar dicas.
 
 ## Contribuição de Dados
 
-Se você tiver informações sobre eventos esportivos locais ou dicas para outros atletas, sinta-se à vontade para contribuir com dados!
+Se você tiver informações sobre eventos esportivos arenas ou dicas para outros atletas, sinta-se à vontade para contribuir com dados!
 
 ## Tecnologias Utilizadas
 

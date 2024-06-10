@@ -1,0 +1,44 @@
+.container {
+    height: calc(100vh - 75px);
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    padding: auto;
+}
+
+.row h2 {
+    font-weight: 900;
+    font-size: 40px;
+}
+
+.row p {
+    padding-top: 20px;
+    font-weight: 200;
+}
+
+ .column {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.column .row .column {
+    width: 50%;
+}
+
+.container2 {
+    background-color: red;
+}
+
+.container3 {
+    height: 33vh;
+    background-color: white;
+}
+
+.container4 {
+    height: 33vh;
+    background-color: blue;
+}

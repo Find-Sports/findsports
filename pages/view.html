@@ -8,8 +8,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <!-- Visible Changes -->
-        <title>FindSports - Sobre</title>
-        <link rel="icon" type="image/svg" href="../assets/img/findsports-icon.svg">
+        <title>Minha aplicação</title>
+        <link rel="icon" type="image/svg" href="assets/img/findsports-icon.svg">
 
         <!-- Page Informations -->
         <meta name="author" content="FindSports Inc." />
@@ -17,11 +17,14 @@
         <meta name="copyright" content="© 2024 FindSports Inc." />
         <meta name="keywords" content="html, css, javascript, pucminas, puc, find, sports" />
 
-        <!-- Third Party Requests -->
+        <!-- Front End Requests -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
         <script src="https://kit.fontawesome.com/c785f8ac1b.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        
         <link rel="stylesheet" href="../assets/css/main-style.css">
-        <link rel="stylesheet" href="../assets/css/page-style.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     </head>
 
     <body>
@@ -33,12 +36,11 @@
             </a>
       
             <nav class="navbar">
-              <ul>
-                <li><a href="../pages/users.html" class="disable">Usuários</a></li>
-                <li><a href="../pages/arenas.html" class="disable">Arenas</a></li>
-                <li><a href="../pages/teams.html" class="disable">Times</a></li>
-                <li><a href="../pages/events.html" class="disable">Eventos</a></li>
-                <li><a href="../pages/about.html">Sobre Nós</a></li>
+              <ul class="m-0">
+                <li><a href="cadastrararena.html">Arenas</a></li>
+                <li><a href="#">Times</a></li>
+                <li><a href="#">Campeonatos</a></li>
+                <li><a href="#">Sobre Nós</a></li>
               </ul>
             </nav>
       
@@ -58,11 +60,9 @@
         </header>
 
         <main>
+          <div id="container">
 
-          <section class="container">
-
-          </section>
-
+          </div>
         </main>
 
         <footer>
@@ -83,14 +83,10 @@
           </nav>
       
         </footer>
-        
-        <!-- Importação do jQuery -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-        <!-- Importação do seu arquivo JavaScript -->
-        <script src="../assets/scripts/login.js"></script>
-        <script src="../assets/scripts/checkDisable.js"></script>
-
+        <!-- Java Script Request -->
+        <script src="../assets/scripts/viewarenasla.js"></script>
+       
     </body>
 
 </html>

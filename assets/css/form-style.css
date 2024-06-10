@@ -10,42 +10,13 @@
     --fonte-primaria: "Inter", Arial, sans-serif;
 }
 
-.container {
-    height: calc(100vh - 75px);
-}
-
-.container .row {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    padding: 75px;
-}
-
-.container .row h2 {
-    font-weight: 900;
-    font-size: 40px;
-}
-
-.container .row p {
-    padding-top: 20px;
-    font-weight: 200;
-}
-
-.container .formDiv {
+form {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.container .formDiv h3 {
-    color: white;
-    font-weight: 900;
-    font-size: 20px;
-    margin-bottom: 10px;
-    text-align: start;
-}
-
-.container .formDiv .contentBox {
+form .contentBox {
     padding: 5px 10px;
     border-radius: 28px;
     background: #242424;
@@ -53,23 +24,23 @@
     margin-bottom: 15px;
 }
 
-.container .formDiv .contentBox .contentInput {
+form .contentBox .contentInput {
     font-size: 16px;
     font-weight: 300;
     margin-left: 14px;
     outline: none;
     border: none;
     background: transparent;
-    width: 300px;
+    min-width: 350px;
     color: var(--cor-primaria);
     transition: 0.3s ease;
 }
 
-.container .formDiv .contentBox .contentInput::placeholder {
+form .contentBox .contentInput::placeholder {
     color: var(--cor-secundaria);
 }
 
-.container .formDiv button {
+form button {
     color: white;
     background-color: #121212;
     border-color: #1ed760;
@@ -81,11 +52,10 @@
     font-size: 12.5px;
 }
 
-.container .formDiv button:hover {
+form button:hover {
     color: #1ed760;
     transition: 0.3s ease;
 }
-
 
 .infoSubmit {
     color: var(--cor-secundaria) !important; 
