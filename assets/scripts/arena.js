@@ -1,11 +1,11 @@
-const serverURL = 'http://localhost:3000/'; // URL do seu servidor JSON
+const serverURL = 'http://localhost:3000';
 
 // Cadastrar arena
 $('#registerArena').submit(function(e) {
   e.preventDefault();
 
   $.ajax({
-      url: `${serverURL}arena`,
+      url: `${serverURL}/arena-register`,
       type: 'POST',
       data: JSON.stringify({
           name: $("#name").val(),
@@ -16,7 +16,8 @@ $('#registerArena').submit(function(e) {
           contact: {
               phone: $("#phone").val()
           },
-          description: $("#description").val()
+          description: $("#description").val(),
+          ownerId: sessionStorage.getItem('currentUserId')
       }),
       contentType: 'application/json',
       success: function(response) {
@@ -28,23 +29,23 @@ $('#registerArena').submit(function(e) {
   });
 });
 
-// Buscar arenas
-$.getJSON(serverURL, function(arena) {
-  $.each(arena, function(i, user) {
-      const userDiv = `
-          <div>
-              <h2>${user.name}</h2>
-              <p>Endereço: ${user.address}</p>
-              <p>Esportes: ${user.sports.join(', ')}</p>
-              <p>Abertura: ${user.opening}</p>
-              <p>Fechamento: ${user.closing}</p>
-              <p>Contato: ${user.contact.phone}</p>
-              <p>Descrição: ${user.description}</p>
-          </div>
-      `;
-      $('#container').append(userDiv);
-  });
-});
+// // Buscar arenas
+// $.getJSON(serverURL, function(arena) {
+//   $.each(arena, function(i, user) {
+//       const userDiv = `
+//           <div>
+//               <h2>${user.name}</h2>
+//               <p>Endereço: ${user.address}</p>
+//               <p>Esportes: ${user.sports.join(', ')}</p>
+//               <p>Abertura: ${user.opening}</p>
+//               <p>Fechamento: ${user.closing}</p>
+//               <p>Contato: ${user.contact.phone}</p>
+//               <p>Descrição: ${user.description}</p>
+//           </div>
+//       `;
+//       $('#container').append(userDiv);
+//   });
+// });
 
 
 
@@ -60,3 +61,4 @@ $.getJSON(serverURL, function(arena) {
 $(document).ready(function(){
   $('#phone').mask('(00)00000-0000');
 });
+

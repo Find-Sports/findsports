@@ -1,6 +1,6 @@
-const serverURL = 'http://localhost:3000'; // URL do seu servidor JSON
+const serverURL = 'http://localhost:3000';
 
-// Registro
+// Cadastrar usuário
 $('#registerForm').submit(function(event) {
     event.preventDefault();
   

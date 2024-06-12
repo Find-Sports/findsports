@@ -9,17 +9,18 @@
     padding: auto;
 }
 
-.row h2 {
+h2 {
     font-weight: 900;
     font-size: 40px;
 }
 
-.row p {
+p {
     padding-top: 20px;
     font-weight: 200;
 }
 
  .column {
+    padding: 100px;
     display: flex;
     flex-direction: column;
     text-align: center;
