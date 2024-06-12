@@ -1,11 +1,11 @@
-const serverURL = 'http://localhost:3000/';
+const serverURL = 'http://localhost:3000';
 
 // Cadastrar arena
-$('#registerArena').submit(function(e) {
+$('#registerEvento').submit(function(e) {
   e.preventDefault();
 
   $.ajax({
-      url: `${serverURL}arena`,
+      url: `${serverURL}/evento`,
       type: 'POST',
       data: JSON.stringify({
           name: $("#name").val(),

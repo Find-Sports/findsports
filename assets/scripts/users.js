@@ -7,22 +7,18 @@ $(document).ready(function() {
         success: function(users) {
             users.forEach(function(user) {
                 var userElement = `
-                    <div class="user">
+                    <div class="user" data-id="${user.id}">
                         <h2>${user.username}</h2>
-                        <p>Country: ${user.country}</p>
-                        <p>State: ${user.state}</p>
-                        <p>City: ${user.city}</p>
-                        <p>Neighborhood: ${user.neighborhood}</p>
-                        <p>Sports: ${user.sports.join(', ')}</p>
-                        <p>Birth Date: ${user.birthDate}</p>
-                        <p>Gender: ${user.gender}</p>
-                        <p>Teams: ${user.teams.join(', ')}</p>
                         <p>Rating: ${user.rating}</p>
-                        <p>Likes: ${user.likes}</p>
-                        <p>Dislikes: ${user.dislikes}</p>
                     </div>
                 `;
                 $('#users').append(userElement);
+            });
+
+            // Adicione um evento de clique a cada elemento de usuário
+            $('.user').click(function() {
+                var userId = $(this).data('id');
+                window.location.href = `/pages/user-profile.html?id=${userId}`;
             });
         },
         error: function(error) {
