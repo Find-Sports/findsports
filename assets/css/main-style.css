@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
+@font-face {
+    font-family: 'RoyalAcid';
+    src: url('../font/Royalacid.ttf') format('truetype');
+    font-weight: 100;
+}
+
 /* Variáveis globais */
 :root {
     --cor-primaria: #1ed760;
@@ -8,6 +14,48 @@
     --cor-preto: #121212;
     --cor-branco: #ffffff;
     --fonte-primaria: "Inter", Arial, sans-serif;
+}
+
+.royalacid{
+    font-family: 'RoyalAcid', sans-serif !important;
+    font-weight: 100 !important;
+}
+
+.vw-big{
+    font-size: 4vw;
+}
+
+.vw-bigger{
+    font-size: 10vw;
+}
+
+.thin {
+    font-weight: 100;
+}
+
+.width-80 {
+    width: 80%;
+}
+
+.mg-top {
+    padding-top: 10vh;
+}
+
+.box {
+    border: var(--cor-terciaria) solid;
+    border-radius: 3em;
+}
+
+.pd-lr {
+    margin: 0 1em;
+}
+
+.primary {
+    color: var(--cor-primaria);
+}
+
+.secoundary {
+    color: var(--cor-secundaria);
 }
 
 /* Estilos globais */
@@ -41,7 +89,7 @@ header {
 
 header .logo {
     padding-top: 5px;
-    width: 200px;
+    width: 10em;
 }
 
 header nav ul {
@@ -177,6 +225,7 @@ header .searchBox .searchInput::placeholder {
 main {
     padding-top: 75px;
     background-color: var(--cor-preto);
+    margin: 0 auto;
 }
 
 /* Rodapé */
@@ -253,15 +302,67 @@ footer nav ul li a:hover {
     width: 7px;
   }
   
-  ::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
     background-color: rgba(255, 255, 255, .75);
     border-radius: 100px;
-  }
+}
   
-  
-  
-  /* ===== SELECTION =====*/
-  ::selection {
+/* ===== SELECTION =====*/
+::selection {
     color: var(--cor-branco);
     background: var(--cor-terciaria);
-  }
+}
+
+/* ===== FORM =====*/
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form .contentBox {
+    padding: 5px 10px;
+    border-radius: 28px;
+    background: #242424;
+    transition: background 0.25s;
+    margin-bottom: 15px;
+}
+
+form .contentBox .contentInput {
+    font-size: 16px;
+    font-weight: 300;
+    margin-left: 14px;
+    outline: none;
+    border: none;
+    background: transparent;
+    min-width: 350px;
+    color: var(--cor-primaria);
+    transition: 0.3s ease;
+}
+
+form .contentBox .contentInput::placeholder {
+    color: var(--cor-secundaria);
+}
+
+.infoSubmit {
+    color: var(--cor-secundaria) !important; 
+    transition: 0.3s ease;
+}
+
+/* ===== BUTTON =====*/
+button {
+    color: white;
+    background-color: #121212;
+    border-color: #1ed760;
+    width: 125px;
+    height: 40px;
+    border-radius: 500px;
+    transition: 0.25s;
+    font-weight: 800;
+    font-size: 12.5px;
+}
+
+button:hover {
+    color: #1ed760;
+    transition: 0.3s ease;
+}
