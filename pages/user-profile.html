@@ -22,6 +22,8 @@
         <script src="https://kit.fontawesome.com/c785f8ac1b.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="../assets/css/main-style.css">
         <link rel="stylesheet" href="../assets/css/page-style.css">
+        <link rel="stylesheet" href="../assets/css/form-style.css">
+        <link rel="stylesheet" href="../assets/css/user-style.css">
     </head>
 
     <body>
@@ -57,9 +59,46 @@
         </header>
 
         <main>
-            <div id="user-profile" class="user-container">
-                
-            </div>
+
+            <section class="container">
+                <div class="user-info">
+                    <h2 id="username"></h2>
+                    <div class="upvote-downvote">
+                        <div class="down">
+                        <i class="fa-solid fa-thumbs-down" style="color: #993333;"></i>
+                        <!-- <i class="fa-regular fa-thumbs-down" style="color: var(--cor-branco);"></i> -->
+                        </div>
+                        <div class="up">
+                        <i class="fa-solid fa-thumbs-up" style="color: var(--cor-primaria);"></i>
+                        <!-- <i class="fa-regular fa-thumbs-up" style="color: var(--cor-branco);"></i> -->
+                        </div>
+                    </div>
+                    <p id="country"></p>
+                    <p id="state"></p>
+                    <p id="city"></p>
+                    <p id="neighborhood"></p>
+                    <p id="birthDate"></p>
+                    <p id="gender"></p>
+                    <p id="likes"></p>
+                    <p id="dislikes"></p>
+                    <button id="button" type="submit">Editar</button>
+                </div>
+            
+                <div class="user-activities">
+                    <div class="sports">
+                        <h2 id="sports"></h2>
+                        <p id="teams"></p>
+                        <p id="rating"></p>
+                    </div>
+                    <div class="comments">
+                        <!-- Aqui você pode adicionar os comentários do usuário -->
+                    </div>
+                    <div class="events">
+                        <!-- Aqui você pode adicionar os eventos ativos do usuário -->
+                    </div>
+                </div>
+            </section>
+
         </main>
 
         <footer>
@@ -84,7 +123,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
         <!-- Java Script Request -->
-        <script src="../assets/scripts/user-profile.js"></script>
+        <script src="../assets/scripts/userProfile.js"></script>
         <script src="../assets/scripts/checkLogin.js"></script>
        
     </body>

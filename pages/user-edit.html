@@ -34,7 +34,7 @@
       </a>
 
       <nav class="navbar">
-        <ul class="m-0">
+        <ul>
           <li><a href="">Areans</a></li>
           <li><a href="">Times</a></li>
           <li><a href="">Campeonatos</a></li>
@@ -63,20 +63,53 @@
 
         <div class="column">
 
-          <h2>Cadastro de Arena</h2>
-          <p>Preencha as informações do arena para que os<br>usuários tenham mais informações sobre.</p>
+          <h2>Editar Perfil</h2>
+          <p>Insira suas relações relevantes para que outros<br>usuários tenham mais informações sobre você.</p>
 
         </div>
 
         <div class="formDiv">
-          <form class="form" id="registerArena">
+          <form class="form" id="editUser">
             
             <div class="contentBox">
-              <input class="contentInput" type="text" placeholder="Nome" id="name" required>
+                <input class="contentInput" type="text" placeholder="Nome" id="name" required>
             </div>
 
             <div class="contentBox">
-              <input class="contentInput" type="text" placeholder="Endereço" id="address" required>
+                <input class="contentInput" type="text" placeholder="Biografia" id="biography">
+              </div>
+
+            <div class="contentBox">
+                <input class="contentInput" type="text" placeholder="Data de nascimento" id="birthDate" onfocus="this.type='date'" onblur="if (!this.value) this.type='text'">
+            </div>
+
+            <div class="contentBox">
+                <select class="contentInput infoSubmit" id="gender">
+                  <option value="" disabled selected>Selecione...</option>
+                  <option value="masc">Masculino</option>
+                  <option value="femi">Feminino</option>
+                  <option value="other">Outro</option>
+                </select>
+              </div>
+
+            <div class="contentBox">
+                <input class="contentInput" type="text" placeholder="País" id="country" required>
+            </div>
+
+            <div class="contentBox">
+                <input class="contentInput" type="text" placeholder="Estado" id="state" required>
+            </div>
+
+            <div class="contentBox">
+                <input class="contentInput" type="text" placeholder="Cidade" id="city" required>
+            </div>
+
+            <div class="contentBox">
+                <input class="contentInput" type="text" placeholder="Bairro" id="neighborhood">
+            </div>
+
+            <div class="contentBox">
+                <input class="contentInput" type="tel" placeholder="Telefone" id="phone" required>
             </div>
 
             <div class="contentBox">
@@ -90,23 +123,7 @@
               </select>
             </div>
 
-            <div class="contentBox">
-              <input class="contentInput" type="text" placeholder="Abertura" id="opening" onfocus="this.type='time'" onblur="if (!this.value) this.type='text'">
-            </div>
-
-            <div class="contentBox">
-              <input class="contentInput" type="text" placeholder="Fechamento" id="closing" onfocus="this.type='time'" onblur="if (!this.value) this.type='text'">
-            </div>
-
-            <div class="contentBox">
-              <input class="contentInput" type="tel" placeholder="Número" id="phone" required>
-            </div>
-
-            <div class="contentBox">
-              <input class="contentInput" type="text" placeholder="Descrição" id="description" required>
-            </div>
-
-            <button id="button" type="submit">Cadastrar</button>
+            <button id="button" type="submit">Salvar</button>
 
           </form>
 
@@ -139,7 +156,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
     
     <!-- Java Script Request -->
-    <script src="../assets/scripts/cadastrararena.js"></script>
+    <script src="../assets/scripts/editUser.js"></script>
     <script src="../assets/scripts/checkLogin.js"></script>
       
   </body>

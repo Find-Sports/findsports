@@ -29,9 +29,6 @@ $('#registerArena').submit(function(e) {
   });
 });
 
-
-
-
 // Animação (InfoSubmit) para os campos de input
 ["name", "address", "sports", "opening", "closing", "phone", "description"].forEach(id => {
   $("#" + id).on("focus", function() {
@@ -43,4 +40,3 @@ $('#registerArena').submit(function(e) {
 $(document).ready(function(){
   $('#phone').mask('(00)00000-0000');
 });
-

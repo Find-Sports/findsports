@@ -47,13 +47,20 @@
               <input class="searchInput" type="search" placeholder="Buscar..">
             </div> 
       
-            <div class="menu">
-              <input type="checkbox" name="todo" id="menuToggler">
-              <label for="menuToggler">
-                <i class="fa-solid fa-bars"></i>
-                <i class="fa-solid fa-xmark"></i>
-              </label>
-            </div>
+            <div class="menu" id="profileMenuTrigger">
+              <div>Nome</div>
+              <i class="fa-regular fa-user" style="color: var(--cor-primaria);"></i>
+              <!-- <i class="fa-solid fa-bars"></i> -->
+          
+              <!-- Adicione os itens do menu aqui -->
+              <div id="profileMenu" class="profile-menu-hidden">
+                  <a href="/profile">Meu Perfil</a>
+                  <a href="/arenas">Minhas Arenas</a>
+                  <a href="/events">Meus Eventos</a>
+                  <a href="/settings">Configurações</a>
+                  <a href="/logout">Logout</a>
+              </div>
+          </div>
       
         </header>
 
@@ -87,6 +94,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
         <!-- Importação do seu arquivo JavaScript -->
+        <script src="assets/scripts/menuTrigger.js"></script>
         <script src="assets/scripts/login.js"></script>
         <script src="assets/scripts/checkLogin.js"></script>
        

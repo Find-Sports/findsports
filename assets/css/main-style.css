@@ -68,8 +68,23 @@ header nav ul li a:hover {
 }
 
 header .menu {
-    display: none;
+    display: flex;
+    background-color: var(--cor-secundaria);
+    padding: 10px;
 }
+
+
+
+
+
+#profileMenu {
+    display: none;
+    /* restante do seu CSS */
+}
+
+
+
+
 
 /* TODO START */
 
