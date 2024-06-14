@@ -1,7 +1,7 @@
 $(document).ready(function() {
-    const userId = sessionStorage.getItem('currentUserId');
+    const userToken = sessionStorage.getItem('currentUserToken');
 
-    if (!userId) {
+    if (!userToken) {
         $('.disable').each(function() {
             $(this).attr('id', 'null');
             $(this).attr('href', '#');

@@ -9,7 +9,7 @@
 
     <!-- Visible Changes -->
     <title>FindSports</title>
-    <link rel="icon" type="image/svg" href="../assets/img/findsports-icon.svg">
+    <link rel="icon" type="image/svg" href="../assets/svg/findsports-icon.svg">
 
     <!-- Page Informations -->
     <meta name="author" content="FindSports Inc." />
@@ -20,8 +20,10 @@
     <!-- Third Party Requests -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <script src="https://kit.fontawesome.com/c785f8ac1b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css">
+    <!-- My Css Requests -->
     <link rel="stylesheet" href="../assets/css/main-style.css">
-    <link rel="stylesheet" href="../assets/css/page-style.css">
+    
   </head>
 
   <body>
@@ -29,7 +31,7 @@
     <header>
 
       <a href="../index.html" class="logo">
-        <img src="../assets/img/findsports-logo.svg" alt="FindSports Logo">
+        <img src="../assets/svg/findsports-logo.svg" alt="FindSports Logo">
       </a>
 
       <nav class="navbar">
@@ -75,10 +77,6 @@
             </div>
 
             <div class="contentBox">
-                <input class="contentInput" type="text" placeholder="Biografia" id="biography">
-              </div>
-
-            <div class="contentBox">
                 <input class="contentInput" type="text" placeholder="Data de nascimento" id="birthDate" onfocus="this.type='date'" onblur="if (!this.value) this.type='text'">
             </div>
 
@@ -89,7 +87,7 @@
                   <option value="femi">Feminino</option>
                   <option value="other">Outro</option>
                 </select>
-              </div>
+            </div>
 
             <div class="contentBox">
                 <input class="contentInput" type="text" placeholder="País" id="country" required>
@@ -104,7 +102,7 @@
             </div>
 
             <div class="contentBox">
-                <input class="contentInput" type="text" placeholder="Bairro" id="neighborhood">
+                <input class="contentInput" type="text" placeholder="Bairro" id="neighborhood" required>
             </div>
 
             <div class="contentBox">
@@ -112,8 +110,8 @@
             </div>
 
             <div class="contentBox">
-              <select class="contentInput infoSubmit" id="sports" required>
-                <option value="" disabled selected>Selecione...</option>
+              <select class="contentInput infoSubmit" id="sports" multiple>
+                <option value="">Esportes</option>
                 <option value="futebol">Futebol</option>
                 <option value="basquete">Basquete</option>
                 <option value="volei">Vôlei</option>
@@ -155,7 +153,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
     
     <!-- Java Script Request -->
-    <script src="../assets/scripts/editUser.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+    <script src="../assets/scripts/userEdit.js"></script>
     <script src="../assets/scripts/checkLogin.js"></script>
       
   </body>

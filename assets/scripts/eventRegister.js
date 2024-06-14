@@ -4,9 +4,10 @@ const serverURL = 'http://localhost:3000';
 $('#registerEvento').submit(function(e) {
     e.preventDefault();
 
-        $.ajax({
+    $.ajax({
         url: `${serverURL}/evento-register`,
         type: 'POST',
+        headers: {'Authorization': `Bearer ${sessionStorage.getItem('currentUserToken')}`},
         data: JSON.stringify({
             name: $("#name").val(),
             address: $("#address").val(),
@@ -17,14 +18,14 @@ $('#registerEvento').submit(function(e) {
         contentType: 'application/json',
         success: function(response) {
             console.log('Evento cadastrada com sucesso:', response);
+            // Animação (InfoSubmit) para os campos de input
+            ["name", "address", "sport", "datetime", "description"].forEach(id => {
+                $("#" + id).addClass("infoSubmit");
+            });
         },
         error: function(error) {
             console.error('Erro ao cadastrar a evento:', error);
         }
-    });
-    // Animação (InfoSubmit) para os campos de input
-    ["name", "address", "sport", "datetime", "description"].forEach(id => {
-        $("#" + id).addClass("infoSubmit");
     });
 });
 

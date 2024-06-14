@@ -1,19 +1,44 @@
 const serverURL = 'http://localhost:3000';
 
+function loginUser(username, password) {
+    $.ajax({
+        url: `${serverURL}/user-login`,
+        type: 'POST',
+        data: JSON.stringify({
+            username: username,
+            password: password,
+        }),
+        contentType: 'application/json',
+        success: function(response) {
+            console.log('Login efetuado com sucesso');
+            sessionStorage.setItem('currentUserToken', response.token);
+            window.location.href = '../index.html';
+        },
+        error: function(error) {
+            console.error('Erro ao fazer login:', error);
+        }
+    });
+}
+
 // Cadastrar usuário
 $('#registerForm').submit(function(event) {
     event.preventDefault();
+  
+    let username = $("#regUsername").val();
+    let password = $("#regPassword").val();
   
     $.ajax({
         url: `${serverURL}/user-register`,
         type: 'POST',
         data: JSON.stringify({
-            username: $("#regUsername").val(),
-            password: $("#regPassword").val(),
+            username: username,
+            password: password,
         }),
         contentType: 'application/json',
         success: function(response) {
             console.log('Usuário Cadastrado:', response);
+            // Loga o usuário automaticamente após o registro
+            loginUser(username, password);
         },
         error: function(error) {
             console.error('Erro ao cadastrar usuário:', error);
@@ -25,26 +50,8 @@ $('#registerForm').submit(function(event) {
 $('#loginForm').submit(function(event) {
     event.preventDefault();
   
-    $.ajax({
-        url: `${serverURL}/user-login`,
-        type: 'POST',
-        data: JSON.stringify({
-            username: $("#logUsername").val(),
-            password: $("#logPassword").val(),
-        }),
-        contentType: 'application/json',
-        success: function(response) {
-            console.log('Login Realizado:', response);
-            if (response.userId) {
-                console.log('Setting currentUserId:', response.userId);
-                sessionStorage.setItem('currentUserId', response.userId);
-                window.location.href = '../index.html';
-            } else {
-                console.log('response.id is not set');
-            }
-        },
-        error: function(error) {
-            console.error('Erro ao cadastrar usuário:', error);
-        }
-    });
+    let username = $("#logUsername").val();
+    let password = $("#logPassword").val();
+  
+    loginUser(username, password);
 });

@@ -1,7 +1,7 @@
 $(document).ready(function() {
-    const userId = sessionStorage.getItem('currentUserId');
+    const userToken = sessionStorage.getItem('currentUserToken');
 
-    if (!userId) {
+    if (!userToken) {
         window.location.href = '../pages/landing.html'; // substitua por sua página de login
     }
 });
