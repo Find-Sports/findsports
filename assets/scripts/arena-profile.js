@@ -1,5 +1,3 @@
-const serverURL = 'http://localhost:3000';
-
 $(document).ready(function() {
     // Obtenha o ID do usuário da URL
     const urlParams = new URLSearchParams(window.location.search);

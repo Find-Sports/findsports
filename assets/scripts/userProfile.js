@@ -1,5 +1,3 @@
-const serverURL = 'http://localhost:3000';
-
 $(document).ready(function() {
     // Obtenha o ID do usuário da URL
     const urlParams = new URLSearchParams(window.location.search);
@@ -9,6 +7,7 @@ $(document).ready(function() {
         url: `${serverURL}/user-profile/${id}`,
         type: 'GET',
         success: function(user) {
+            $('#name').text(user.name);
             $('#username').text(user.username);
             $('#country').text('País: ' + user.country);
             $('#state').text('Estado: ' + user.state);

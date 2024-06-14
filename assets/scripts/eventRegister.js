@@ -1,4 +1,3 @@
-const serverURL = 'http://localhost:3000';
 
 // Cadastrar evento
 $('#registerEvento').submit(function(e) {

@@ -1,5 +1,3 @@
-const serverURL = 'http://localhost:3000';
-
 function loginUser(username, password) {
     $.ajax({
         url: `${serverURL}/user-login`,

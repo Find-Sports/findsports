@@ -1,5 +1,3 @@
-const serverURL = 'http://localhost:3000';
-
 $(document).ready(function() {
     $.ajax({
         url: `${serverURL}/arenas`,

@@ -1,5 +1,3 @@
-const serverURL = 'http://localhost:3000';
-
 // Cadastrar arena
 $('#registerArena').submit(function(e) {
     e.preventDefault();

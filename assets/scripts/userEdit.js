@@ -1,6 +1,4 @@
-const serverURL = 'http://localhost:3000';
-
-// Cadastrar arena
+// Editar usuário
 $('#editUser').submit(function(e) {
     e.preventDefault();
   
@@ -37,15 +35,37 @@ $('#editUser').submit(function(e) {
 
 // Animação (InfoSubmit) para os campos de input
 ["name", "gender", "birthDate", "country", "state", "city", "neighborhood", "sports", "phone"].forEach(id => {
-  $("#" + id).on("focus", function() {
-      $(this).removeClass("infoSubmit");
-  });
+    $("#" + id).on("focus", function() {
+        $(this).removeClass("infoSubmit");
+    });
 });
 
 // Máscara para o campo de telefone
 $(document).ready(function(){
-  $('#phone').mask('(00)00000-0000');
+    $('#phone').mask('(00)00000-0000');
 });
 
-var element = document.querySelector('#sports');
-var choices = new Choices(element);
+
+var choices = new Choices('#sports', {
+    allowHTML: true,
+    removeItemButton: false,
+    searchEnabled: true,
+    placeholder: true,
+    placeholderValue: 'Escolha um ou mais esportes',
+    searchPlaceholderValue: 'Pesquise um esporte',
+    itemSelectText: 'Pressione para selecionar',
+    maxItemCount: 10,
+    renderChoiceLimit: 10
+});
+
+var choices = new Choices('#gender', {
+    allowHTML: true,
+    removeItemButton: false,
+    searchEnabled: true,
+    placeholder: true,
+    placeholderValue: 'Escolha um ou mais esportes',
+    searchPlaceholderValue: 'Pesquise um esporte',
+    itemSelectText: 'Pressione para selecionar',
+    maxItemCount: 10,
+    renderChoiceLimit: 10
+});
