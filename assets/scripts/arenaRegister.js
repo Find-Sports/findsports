@@ -43,6 +43,14 @@ $(document).ready(function(){
     $('#phone').mask('(00)00000-0000');
 });
 
-$(".selectMulti").select2({
-    placeholder: 'Esportes'
-})
+var choices = new Choices('#sports', {
+    allowHTML: true,
+    removeItemButton: false,
+    searchEnabled: true,
+    placeholder: true,
+    placeholderValue: 'Cadastrar esportes',
+    searchPlaceholderValue: 'Buscar esportes',
+    itemSelectText: 'Selecionar',
+    maxItemCount: 10,
+    renderChoiceLimit: 10
+});

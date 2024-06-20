@@ -34,3 +34,15 @@ $('#registerEvento').submit(function(e) {
       $(this).removeClass("infoSubmit");
   });
 });
+
+var choices = new Choices('#sport', {
+    allowHTML: true,
+    removeItemButton: false,
+    searchEnabled: true,
+    placeholder: true,
+    placeholderValue: 'Cadastrar esportes',
+    searchPlaceholderValue: 'Buscar esportes',
+    itemSelectText: 'Selecionar',
+    maxItemCount: 10,
+    renderChoiceLimit: 10
+});
