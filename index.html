@@ -49,12 +49,12 @@
               <input class="searchInput" type="search" placeholder="Buscar..">
             </div> 
       
-            <div class="user-content row">
-                <div class="notify" onclick="toggleNotificationMenu()">
+            <div class="user-content">
+                <div class="navbox notify" onclick="toggleNotificationMenu()">
                     <i class="fa-regular fa-bell"></i>
                 </div>
-                <div class="user row" onclick="toggleUserMenu()">
-                    <div>Nome</div>
+                <div class="navbox user" onclick="toggleUserMenu()">
+                    <div id="nav-username">@username</div>
                     <i class="fa-regular fa-user" style="color: var(--cor-primaria);"></i>
                 </div>
             </div>
@@ -99,7 +99,7 @@
                         <h3>Notificações</h2>
                     </div>
                     <hr>
-                    <div class="notificationContainer">
+                    <div class="notificationContainer" id="notificationContainer">
                         <div class="notification">
                             <p class="content">Fulano te convidou para uma pelada!</p>
                             <button class="button2">Aceitar</button>

@@ -5,8 +5,8 @@ $('#editUser').submit(function(e) {
     $.ajax({
         url: `${serverURL}/user-edit`,
         type: 'PUT',
-        headers: {'Authorization': `Bearer ${sessionStorage.getItem('currentUserToken')}`},
         data: JSON.stringify({
+            id: sessionStorage.getItem('currentUserToken'),
             name: $("#name").val(),
             gender: $("#gender").val(),
             birthDate: $("#birthDate").val(),
@@ -34,7 +34,7 @@ $('#editUser').submit(function(e) {
 });
 
 // Animação (InfoSubmit) para os campos de input
-["name", "gender", "birthDate", "country", "state", "city", "neighborhood", "sports", "phone"].forEach(id => {
+["name", "birthDate", "gender", "country", "state", "city", "neighborhood", "sports", "phone"].forEach(id => {
     $("#" + id).on("focus", function() {
         $(this).removeClass("infoSubmit");
     });
@@ -43,7 +43,9 @@ $('#editUser').submit(function(e) {
 // Máscara para o campo de telefone
 $(document).ready(function(){
     $('#phone').mask('(00)00000-0000');
+    $('#birthDate').mask('00/00/0000');
 });
+
 
 
 var choices = new Choices('#sports', {
@@ -51,9 +53,9 @@ var choices = new Choices('#sports', {
     removeItemButton: false,
     searchEnabled: true,
     placeholder: true,
-    placeholderValue: 'Escolha um ou mais esportes',
-    searchPlaceholderValue: 'Pesquise um esporte',
-    itemSelectText: 'Pressione para selecionar',
+    placeholderValue: 'Cadastrar esportes',
+    searchPlaceholderValue: 'Buscar esportes',
+    itemSelectText: 'Selecionar',
     maxItemCount: 10,
     renderChoiceLimit: 10
 });
@@ -61,11 +63,11 @@ var choices = new Choices('#sports', {
 var choices = new Choices('#gender', {
     allowHTML: true,
     removeItemButton: false,
-    searchEnabled: true,
+    searchEnabled: false,
     placeholder: true,
-    placeholderValue: 'Escolha um ou mais esportes',
-    searchPlaceholderValue: 'Pesquise um esporte',
-    itemSelectText: 'Pressione para selecionar',
+    placeholderValue: 'Escolher',
+    searchPlaceholderValue: 'Pesquisar',
+    itemSelectText: 'Selecionar',
     maxItemCount: 10,
     renderChoiceLimit: 10
 });

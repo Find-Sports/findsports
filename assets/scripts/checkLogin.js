@@ -6,21 +6,8 @@ $(document).ready(function() {
     if (!userToken) {
         redirectToLogin();
     } else {
-        // Verifique a validade do token no servidor
-        $.ajax({
-            url: `${serverURL}/verify-token`, // substitua por seu endpoint de verificação de token
-            method: 'POST',
-            headers: {'Authorization': `Bearer ${userToken}`},
-            success: function(response) {
-                if (!response.valid) {
-                    redirectToLogin();
-                }
-            },
-            error: function() {
-                redirectToLogin();
-                
-            }
-        });
+        console.log('User is logged in');
+        setup();
     }
 });
 

@@ -8,18 +8,18 @@ $(document).ready(function() {
         type: 'GET',
         success: function(user) {
             $('#name').text(user.name);
-            $('#username').text(user.username);
+            $('#username').text('@' + user.username);
             $('#country').text('País: ' + user.country);
             $('#state').text('Estado: ' + user.state);
             $('#city').text('Cidade: ' + user.city);
             $('#neighborhood').text('Bairro: ' + user.neighborhood);
             $('#birthDate').text('Idade: ' + user.birthDate);
             $('#gender').text('Sexo: ' + user.gender);
-            $('#likes').text('Likes: ' + user.likes);
-            $('#dislikes').text('Dislikes: ' + user.dislikes);
+            $('#likes').text(user.likes);
+            $('#dislikes').text(user.dislikes);
             $('#sports').text('Sports: ' + user.sports.join(', '));
             $('#teams').text('Teams: ' + user.teams.join(', '));
-            $('#rating').text('Rating: ' + user.rating);
+            $('#rating').text(user.rating);
             // Adicione aqui o código para preencher os comentários e eventos do usuário
         },
         error: function(error) {

@@ -10,6 +10,7 @@ function loginUser(username, password) {
         success: function(response) {
             console.log('Login efetuado com sucesso');
             sessionStorage.setItem('currentUserToken', response.token);
+            localStorage.setItem('currentUserUsername', response.username);
             window.location.href = '../index.html';
         },
         error: function(error) {

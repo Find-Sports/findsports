@@ -77,10 +77,10 @@
             </div>
 
             <div class="contentBox">
-                <input class="contentInput" type="text" placeholder="Data de nascimento" id="birthDate" onfocus="this.type='date'" onblur="if (!this.value) this.type='text'">
+                <input class="contentInput" type="text" placeholder="Data de nascimento" id="birthDate" required>
             </div>
 
-            <div class="contentBox">
+            <div class="contentBox" required>
                 <select class="contentInput infoSubmit" id="gender">
                     <option value="Masculino">Masculino</option>
                     <option value="Feminino">Feminino</option>
@@ -109,8 +109,7 @@
             </div>
 
             <div class="contentBox">
-                <select class="contentInput infoSubmit" id="sports" multiple>
-                    <option value="">Esportes</option>
+                <select class="contentInput infoSubmit" id="sports" multiple required>
                     <option value="futebol">Futebol</option>
                     <option value="basquete">Basquete</option>
                     <option value="volei">Vôlei</option>

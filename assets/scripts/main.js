@@ -1,5 +1,5 @@
 // Backend URL
-const serverURL = 'http://localhost:3000';
+const serverURL = 'https://be1ab069-cefb-4c5f-917f-a13eb86ceebd-00-21xww2ssvkinv.kirk.replit.dev';
 
 
 // Dropdown menu
@@ -32,12 +32,11 @@ $('#sendNotification').click(function() {
     $.ajax({
         url: `${serverURL}/send-notification`,
         type: 'POST',
-        headers: {'Authorization': `Bearer ${sessionStorage.getItem('currentUserToken')}`},
         data: JSON.stringify({
-            id: 'unique-notification-id', // Substitua por um ID de notificação único
-            content: "Olá! Você tem uma nova mensagem.",
-            sender: 'sender-id', // Substitua pelo ID do remetente
-            receiver: 'receiver-id' // Substitua pelo ID do destinatário
+            id: 1,
+            content: "Você recebeu uma notificação de Fu",
+            sender: 1,
+            receiver: 2
         }),
         contentType: 'application/json',
         success: function(response) {
@@ -49,24 +48,23 @@ $('#sendNotification').click(function() {
     });
 });
 
-// Get Notifications
-$(document).ready(function() {
-    $.ajax({
-        url: `${serverURL}/notifications`,
-        type: 'GET',
-        success: function(notifications) {
-            notifications.forEach(function(notification) {
-                var userElement = `
-                    <div class="notification">
-                        <p class="content">${notification.username}</p>
-                        <button class="button2">Aceitar</button>
-                    </div>
-                `;
-                $('#notificationContainer').append(userElement);
-            });
-        },
-        error: function(error) {
-            console.error('Erro ao buscar usuários:', error);
-        }
-    });
-});
+function setup() {
+    $('#nav-username').text('@' + localStorage.getItem('currentUserUsername'));
+}
+
+    // // Obtenha o ID do usuário da URL
+    // const urlParams = new URLSearchParams(window.location.search);
+    // const id = urlParams.get('id');
+
+    // $.ajax({
+    //     url: `${serverURL}/user-profile/${id}`,
+    //     type: 'GET',
+    //     success: function(user) {
+    //         $('#name').text(user.name);
+    //         $('#username').text('@' + user.username);
+    //         $('#country').text('País: ' + user.country);
+    //         $('#state').text('Estado: ' + user.state);
+    //         $('#city').text('Cidade: ' + user.city);
+    //         $('#neighborhood').text('Bairro: ' + user.neighborhood);
+    //         $('#birthDate').text('Idade: ' + user.birthDate);
+    //         $('#gender').text('Sexo:

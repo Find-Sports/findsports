@@ -58,18 +58,20 @@
 
         <main>
 
-            <section class="container">
+            <section>
                 <div class="user-info">
                     <h2 id="name"></h2>
                     <p id="username"></p>
                     <div class="upvote-downvote">
-                        <div class="down">
-                        <i class="fa-solid fa-thumbs-down" style="color: #993333;"></i>
-                        <!-- <i class="fa-regular fa-thumbs-down" style="color: var(--cor-branco);"></i> -->
+                        <div class="down row">
+                            <p id="dislikes"></p>
+                            <i class="fa-solid fa-thumbs-down" style="color: #993333;"></i>
+                            <!-- <i class="fa-regular fa-thumbs-down" style="color: var(--cor-branco);"></i> -->
                         </div>
-                        <div class="up">
-                        <i class="fa-solid fa-thumbs-up" style="color: var(--cor-primaria);"></i>
-                        <!-- <i class="fa-regular fa-thumbs-up" style="color: var(--cor-branco);"></i> -->
+                        <div class="up row">
+                            <i class="fa-solid fa-thumbs-up" style="color: var(--cor-primaria);"></i>
+                            <!-- <i class="fa-regular fa-thumbs-up" style="color: var(--cor-branco);"></i> -->
+                            <p id="likes"></p>
                         </div>
                     </div>
                     <p id="country"></p>
@@ -79,21 +81,27 @@
                     <p id="birthDate"></p>
                     <p id="gender"></p>
                     <p id="likes"></p>
-                    <p id="dislikes"></p>
                     <button class="button1" id="button" type="submit">Editar</button>
                 </div>
             
                 <div class="user-activities">
-                    <div class="sports">
-                        <h2 id="sports"></h2>
-                        <p id="teams"></p>
-                        <p id="rating"></p>
+                    <div class="box mg-bot">
+                        <h2>Esportes:</h2>
+                        <div class="row" id="sports"></div>
                     </div>
-                    <div class="comments">
-                        <!-- Aqui você pode adicionar os comentários do usuário -->
+                    <div class="box mg-bot">
+                        <h2>Equipes:</h2>
+                        <div class="row" id="teams"></div>
                     </div>
-                    <div class="events">
+                    <div class="box mg-bot">
+                        <h2>Atividade Recente:</h2>
                         <!-- Aqui você pode adicionar os eventos ativos do usuário -->
+                    </div>
+                    <div class="box">
+                        <h2>Comentar:</h2>
+                        <textarea></textarea>
+                        <h2>Comentários:</h2>
+                        <div class="row" id="teams"></div>
                     </div>
                 </div>
             </section>
