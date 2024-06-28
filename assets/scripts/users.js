@@ -8,6 +8,7 @@ $(document).ready(function() {
                     <div class="user" data-id="${user.id}">
                         <h2>${user.username}</h2>
                         <p>Rating: ${user.rating}</p>
+                        <p>Rating: ${user.rating}</p>
                     </div>
                 `;
                 $('#users').append(userElement);
