@@ -20,10 +20,6 @@ Se você tiver informações sobre eventos esportivos arenas ou dicas para outro
 - CSS
 - JavaScript
 
-## Contato
-
-Se tiver alguma dúvida ou precisar de suporte, entre em contato conosco em email@example.com.
-
 ## Professores Responsáveis
 
 - Carlos Alberto Marques Pietrobon
