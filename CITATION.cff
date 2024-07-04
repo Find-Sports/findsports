@@ -1,0 +1,41 @@
+cff-version: 1.0.1
+message: Please cite this software using these metadata.
+title: Descontre Financeiro
+authors:
+  - family-names: Dias Bicalho
+    given-names: Rubens
+  - family-names: Melgaço Valeriano
+    given-names: Gustavo Tadeu
+  - family-names: Rodrigues Pereira da Silva
+    given-names: Gabriel
+  - family-names: Nascimento Gandra Pereira
+    given-names: Carlos Eduardo
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Marques Pietrobon
+    given-names: Carlos Alberto
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Saldanha Rivero
+    given-names: Ilo Amy
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Freitas Diniz
+    given-names: Luciana Mara
+
+keywords:
+  - Esportes;
+  - Arenas;
+  - Eventos;
+  - Times;
+  - Rating;
+  - Comentários;
+  - Likes;
+  - Deslikes; 
+  - Notificações;
+  - Perfil;
+
+repository-code: https://github.com/Find-Sports/findsports.git
+license: CC-BY-4.0
+version: 1.0.0
+date-released: 2024-07-03
