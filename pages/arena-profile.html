@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <!-- Visible Changes -->
-        <title>FindSports - Usuário</title>
+        <title>FindSports - Arena</title>
         <link rel="icon" type="image/svg" href="../assets/svg/findsports-icon.svg">
 
         <!-- Page Informations -->
@@ -55,7 +55,7 @@
 
             <section>
                 <div class="user-info">
-                    <img src="../assets/img/usericon.jpg" class="user-image">
+                    <img src="../assets/img/arena.png" class="arena-image">
                     <div class="rating center">
                         <p id="rating"></p>
                     </div>
@@ -84,7 +84,7 @@
                 <div class="user-activities">
                     <div class="box mg-bot">
                         <h2>Esportes:</h2>
-                        <div class="row" id="sports"></div>
+                        <div class="row sports" id="sports"></div>
                     </div>
                     <div class="box mg-bot">
                         <h2>Equipes:</h2>
@@ -95,13 +95,10 @@
                         <!-- Aqui você pode adicionar os eventos ativos do usuário -->
                     </div>
                     <div class="box">
-                        <form id="registerComment">
-                            <h2>Comentar:</h2>
-                            <textarea id="commentContent"></textarea>
-                            <button id="submitComment">Enviar Comentário</button> <!-- Botão adicionado -->
-                            <h2>Comentários:</h2>
-                            <div class="row" id="comments"></div>
-                        </form>
+                        <h2>Comentar:</h2>
+                        <textarea></textarea>
+                        <h2>Comentários:</h2>
+                        <div class="row" id="teams"></div>
                     </div>
                 </div>
             </section>
@@ -132,7 +129,7 @@
         <!-- Java Script Request -->
         <script src="../assets/scripts/main.js"></script>
         <script src="../assets/scripts/checkLogin.js"></script>
-        <script src="../assets/scripts/userProfile.js"></script>
+        <script src="../assets/scripts/arenaProfile.js"></script>
        
     </body>
 

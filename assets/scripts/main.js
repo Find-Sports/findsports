@@ -1,5 +1,5 @@
 // Backend URL
-const serverURL = 'https://be1ab069-cefb-4c5f-917f-a13eb86ceebd-00-21xww2ssvkinv.kirk.replit.dev';
+const serverURL = 'http://localhost:3000';
 
 
 // Dropdown menu
@@ -48,23 +48,62 @@ $('#sendNotification').click(function() {
     });
 });
 
+$(document).ready(function() {
+    // Assuming currentUserToken is stored in sessionStorage
+    var currentUserToken = sessionStorage.getItem('currentUserToken');
+
+    $.ajax({
+        url: `${serverURL}/notifications`,
+        type: 'GET',
+        contentType: 'application/json',
+        data: {
+            token: currentUserToken
+        },
+        success: function(response) {
+            console.log('Notifications fetched successfully:', response);
+            // Process team notifications
+            response.team.forEach(function(notification) {
+                var notificationElement = `
+                    <div class="notification">
+                        <p class="content">${notification.content}</p>
+                        <button class="button2">Aceitar</button>
+                    </div>
+                `;
+                $('#notificationContainer').append(notificationElement);
+            });
+            // Process event notifications
+            response.event.forEach(function(notification) {
+                var notificationElement = `
+                    <div class="notification">
+                        <p class="content">${notification.content}</p>
+                        <button class="button2">Aceitar</button>
+                    </div>
+                `;
+                $('#notificationContainer').append(notificationElement);
+            });
+        },
+        error: function(error) {
+            console.error('Error fetching notifications:', error);
+        }
+    });
+});
+
+
+
+
+
+
+
 function setup() {
+    // Define o nome de usuário na navegação
     $('#nav-username').text('@' + localStorage.getItem('currentUserUsername'));
+    
+    // Obtém o ID do usuário de localStorage
+    var userId = parseInt(sessionStorage.getItem('currentUserToken'), 10);
+    
+    // Encontra o link do perfil do usuário e atualiza seu href
+    var userProfileLink = document.querySelector('#myprofile');
+    if (userProfileLink) {
+        userProfileLink.href = `./pages/user-profile.html?id=${userId}`;
+    }
 }
-
-    // // Obtenha o ID do usuário da URL
-    // const urlParams = new URLSearchParams(window.location.search);
-    // const id = urlParams.get('id');
-
-    // $.ajax({
-    //     url: `${serverURL}/user-profile/${id}`,
-    //     type: 'GET',
-    //     success: function(user) {
-    //         $('#name').text(user.name);
-    //         $('#username').text('@' + user.username);
-    //         $('#country').text('País: ' + user.country);
-    //         $('#state').text('Estado: ' + user.state);
-    //         $('#city').text('Cidade: ' + user.city);
-    //         $('#neighborhood').text('Bairro: ' + user.neighborhood);
-    //         $('#birthDate').text('Idade: ' + user.birthDate);
-    //         $('#gender').text('Sexo:

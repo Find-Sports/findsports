@@ -1,26 +1,19 @@
-// Cadastrar arena
-$('#registerArena').submit(function(e) {
+// Cadastrar time
+$('#registerTeam').submit(function(e) {
     e.preventDefault();
 
     $.ajax({
-        url: `${serverURL}/arena-register`,
+        url: `${serverURL}/team-register`,
         type: 'POST',
         data: JSON.stringify({
             name: $("#name").val(),
-            address: $("#address").val(),
-            sports: $("#sports").val(),
-            opening: $("#opening").val(),
-            closing: $("#closing").val(),
-            contact: {
-                phone: $("#phone").val()
-            },
-            description: $("#description").val(),
+            sports: $("#sport").val()
         }),
         contentType: 'application/json',
         success: function(response) {
-            console.log('Arena cadastrada com sucesso:', response);
+            console.log('Time cadastrado com sucesso:', response);
             // Animação (InfoSubmit) para os campos de input
-            ["name", "address", "sports", "opening", "closing", "phone", "description"].forEach(id => {
+            ["name", "sport"].forEach(id => {
                 $("#" + id).addClass("infoSubmit");
             });
         },
@@ -31,18 +24,14 @@ $('#registerArena').submit(function(e) {
 });
 
 // Animação (InfoSubmit) para os campos de input
-["name", "address", "sports", "opening", "closing", "phone", "description"].forEach(id => {
+["name", "sport"].forEach(id => {
     $("#" + id).on("focus", function() {
         $(this).removeClass("infoSubmit");
     });
 });
 
-// Máscara para o campo de telefone
-$(document).ready(function(){
-    $('#phone').mask('(00)00000-0000');
-});
 
-var choices = new Choices('#sports', {
+var choices = new Choices('#sport', {
     allowHTML: true,
     removeItemButton: false,
     searchEnabled: true,
